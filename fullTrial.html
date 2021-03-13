@@ -1,0 +1,77 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Yoga Mat</title>
+	
+	<style>
+		#smartyogamat td {
+			border-radius: 0px;
+			background: #73AD21;
+			padding: 30px; 
+			width: 75px;
+			height: 105px;  
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<h1 align="center">SMART YOGA MAT</h1>
+    <h3 id="status" align="center">Connected Succesfully!</h3>
+    <script src="/socket.io/socket.io.js"></script>
+	<script>
+        const commands = document.getElementById('commands');
+
+
+        const newItem = (content) => {
+          const item = document.createElement('span');
+          item.innerText = content;
+          return item;
+        };
+        const socket = io();
+
+        socket.on('connect', () => {
+        commands.appendChild(newItem('connect'));
+        });
+
+        socket.on('a', (dataToSend) => {
+
+            //commands.parentNode.removeChild(newChild);
+            document.getElementById("commands").innerHTML ="";
+            console.log(commands)
+            var commands = document.getElementById('commands');
+            console.log(commands)
+            //commands.appendChild(newItem(dataToSend))
+            //document.body.innerHTML = document.body.innerHTML.replace(commands, newChild);
+            commands.innerHTML = dataToSend
+        });
+    </script>
+	<table id="smartyogamat" align="center">
+		
+		<tr>
+			<td id="1"> 1</td>
+			<td id="4">4</td>
+			<td id="7">7</td>
+			<td id="10">10</td>
+			<td id="13">13</td>
+			<td id="16">16</td>
+		</tr>
+		<tr>
+			<td id="2">2</td>
+			<td id="5">5</td>
+			<td id="8">8</td>
+			<td id="11">11</td>
+			<td id="14">14</td>
+			<td id="17">17</td>
+		</tr>
+		<tr>
+			<td id="3">3</td>
+			<td id="6">6</td>
+			<td id="9">9</td>
+			<td id="12">12</td>
+			<td id="15">15</td>
+			<td id="18">18</td>
+		</tr>
+	</table>
+
+</body>
+</html>

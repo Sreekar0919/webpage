@@ -1,0 +1,166 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Montserrat', sans-serif;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: none;
+    outline: none;
+}
+
+html{
+    font-size: 62.5;
+}
+
+:root {
+    --primary-color: #2b81e4;
+    --secondary-color:#eee;
+    --white-color:#fff;
+    --grey-color: #555;
+    --light-grey-color: #777;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: var(--secondary-color);
+    margin: 1rem;
+    box-shadow: 0 1rem 3rem var(--grey-color);
+}
+
+.header{
+    width: 100%;
+    height: calc(100vh - 7rem);
+    background: linear-gradient(rgba(18,
+    113, 225, 0.5), rgba(18, 113, 255, 0.3) 
+    ),url(homePageMat2.jpg) center
+    no-repeat;
+    background-size: cover;
+    perspective: 10000rem;
+}
+
+.header-text{
+    text-align:center;
+    letter-spacing: .1rem;
+}
+.heading{
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    color: var(--white-color);
+    padding-bottom: 1rem;
+}
+
+.header-paragraph{
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--secondary-color);
+    max-width: 50rem ;
+    margin: auto;
+    padding: 1rem;
+}
+.logo{
+    text-transform: uppercase;
+    position: absolute;
+    top:4rem;
+    right:4rem;
+}
+
+.logo h1{
+    display: flex;
+
+}
+
+.logo h1 span{
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--primary-color);
+    background-color:var(--white-color);
+    text-transform: upper;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 0.5rem;
+    border-radius: 50%;
+}
+
+.logo h1 span:nth-child(1){
+    animation: moving-letters 5s .1s infinite
+} 
+
+.logo h1 span:nth-child(2){
+    animation: moving-letters 5s .2s infinite
+} 
+
+.logo h1 span:nth-child(3){
+    animation: moving-letters 5s .3s infinite
+} 
+
+.logo h1 span:nth-child(4){
+    animation: moving-letters 5s .4s infinite
+} 
+
+.logo h1 span:nth-child(5){
+    animation: moving-letters 5s .5s infinite
+} 
+
+.logo h1 span:nth-child(6){
+    animation: moving-letters 5s .6s infinite
+} 
+
+.logo h1 span:nth-child(7){
+    animation: moving-letters 5s .7s infinite
+} 
+
+.logo h1 span:nth-child(8){
+    animation: moving-letters 5s .8s infinite
+} 
+
+.logo h1 span:nth-child(9){
+    animation: moving-letters 5s .9s infinite
+} 
+
+.logo h1 span:nth-child(10){
+    animation: moving-letters 5s 1s infinite
+} 
+
+@keyframes moving-letters{
+    0%{
+        transform:translateY(0);
+    }
+    10%{
+        transform:translateY(0);
+    }
+    15%{
+        transform:translateY(100%);
+    }
+    20%{
+        transform:translateY(0);
+    }
+    100%{
+        transform:translateY(0);
+    }
+}
+.workouts{
+    padding: 5rem 0 10rem 0;
+
+}
+.workout-button{
+
+    padding: .5rem;
+    background-color: rgba(255,255,255,.8);
+    color: var(--light-grey-color);
+    border-radius: .3rem;
+    border:none;
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    cursor: pointer;
+
+}
+.workout2{
+    padding: 2rem 0 1rem 0;
+}
